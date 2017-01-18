@@ -56,7 +56,10 @@ public class Student {
         this.grade = grade;
     }
     public Student() {
-        super();
+        this.name = "";
+        this.id = "";
+        this.gender = "";
+        this.grade = 0;
     }
 
     @Override
@@ -86,16 +89,10 @@ public class Student {
             return false;
         }
         final Student other = (Student) obj;
-        if (Double.doubleToLongBits(this.grade) != Double.doubleToLongBits(other.grade)) {
-            return false;
-        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         if (!Objects.equals(this.id, other.id)) {
-            return false;
-        }
-        if (!Objects.equals(this.gender, other.gender)) {
             return false;
         }
         return true;
