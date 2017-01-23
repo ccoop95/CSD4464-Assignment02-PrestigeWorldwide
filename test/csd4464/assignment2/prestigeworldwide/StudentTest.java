@@ -106,6 +106,20 @@ public class StudentTest {
     }
     
     @Test
+    public void testToString(){
+        System.out.println("Student");
+        
+        String name = "Travis";
+        String id = "12345";
+        String gender = "Trans";
+        double grade = 10;
+        Student instance = new Student(name, id, gender, grade);
+        String expResult = "Student{" + "name=" + name + ", id=" + id + ", gender=" + gender + ", grade=" + grade + '}';
+        String result = instance.toString();
+        assertEquals(result, expResult);
+    }
+    
+    @Test
     public void testEquals() {
         System.out.println("equals");
         Student instance = new StudentImpl();
