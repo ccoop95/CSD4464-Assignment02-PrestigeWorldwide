@@ -9,6 +9,7 @@ package csd4464.assignment2.prestigeworldwide;
  *
  * @author c0659824
  */
-public class Course {
+public class Course extends Student{
+    
     
 }

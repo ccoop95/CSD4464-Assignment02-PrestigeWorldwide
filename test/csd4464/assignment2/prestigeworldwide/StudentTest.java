@@ -78,6 +78,34 @@ public class StudentTest {
     }
     
     @Test
+    public void testConstructorShouldReturnValues(){
+        System.out.println("Student");
+        
+        String name = "Travis";
+        String id = "12345";
+        String gender = "Trans";
+        double grade = 10;
+        Student instance = new Student(name, id, gender, grade);
+        
+        assertEquals(name, instance.getName());
+        assertEquals(id, instance.getId());
+        assertEquals(gender, instance.getGender());
+        assertEquals(grade, instance.getGrade(), 0.0);
+    }
+    
+    @Test
+    public void testEmptyConstructor(){
+        System.out.println("Student");
+
+        Student instance = new Student();
+
+        assertEquals("", instance.getName());
+        assertEquals("", instance.getId());
+        assertEquals("", instance.getGender());
+        assertEquals(0, instance.getGrade(), 0.0);
+    }
+    
+    @Test
     public void testEquals() {
         System.out.println("equals");
         Student instance = new StudentImpl();
