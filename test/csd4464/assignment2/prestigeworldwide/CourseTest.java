@@ -5,6 +5,8 @@
  */
 package csd4464.assignment2.prestigeworldwide;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -37,5 +39,22 @@ public class CourseTest {
     public void tearDown() {
     }
 
+    @Test
+    public void testEmptyCourse(){
+        System.out.println("Course");
+        List<Student> students = new ArrayList<Student>();
+        Course instance = new Course();
+
+        assertEquals(students, instance.getAll());
+    }
     
+    @Test
+    public void testCourseConstructor(){
+        System.out.println("Course");
+        List<Student> students = new ArrayList<Student>();
+        students.add(new Student("Travis", "6969", "Trans", 10));
+        Course instance = new Course();
+        
+        assertEquals(students, instance.getAll());
+    }
 }
