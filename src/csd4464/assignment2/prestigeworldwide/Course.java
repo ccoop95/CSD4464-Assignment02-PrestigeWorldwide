@@ -14,10 +14,33 @@ import java.util.List;
  */
 public class Course extends Student{
     List<Student> students = new ArrayList<>();
+    public List<Student> Course;
+    
+    
+    
+    public void Course(List<Student> Course) {
+            this.Course = Course;
+        }
     
     public List<Student> getAll(){
         return students;
     }
+    
+    public void add(Student stu){
+        students.add(stu);
+    }
+    
+    public void remove(Student stu){
+        students.remove(stu);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
