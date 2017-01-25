@@ -18,13 +18,13 @@ public class Course extends Student{
     List<Student> students = new ArrayList<>();
     public List<Student> Course;
     
-    public void Course(){
-        getAll();
+    public Course(){
+        
     }
     
-    public void Course(List<Student> Course) {
+    public Course(List<Student> Course) {
             this.Course = Course;
-        }
+    }
     
     public List<Student> getAll(){
         return students;

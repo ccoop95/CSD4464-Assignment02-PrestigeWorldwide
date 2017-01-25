@@ -53,7 +53,7 @@ public class CourseTest {
         System.out.println("Course");
         List<Student> students = new ArrayList<>();
         students.add(new Student("Travis", "6969", "Trans", 10));
-        Course instance = new Course();
+        Course instance = new Course(students);
         
         assertEquals(students, instance.getAll());
     }
