@@ -42,7 +42,7 @@ public class CourseTest {
     @Test
     public void testEmptyCourse(){
         System.out.println("Course");
-        List<Student> students = new ArrayList<Student>();
+        List<Student> students = new ArrayList<>();
         Course instance = new Course();
 
         assertEquals(students, instance.getAll());
@@ -51,7 +51,7 @@ public class CourseTest {
     @Test
     public void testCourseConstructor(){
         System.out.println("Course");
-        List<Student> students = new ArrayList<Student>();
+        List<Student> students = new ArrayList<>();
         students.add(new Student("Travis", "6969", "Trans", 10));
         Course instance = new Course();
         

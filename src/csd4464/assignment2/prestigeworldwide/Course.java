@@ -46,20 +46,26 @@ public class Course extends Student{
         students.remove(position);
     }
        
-    public void get(String id){
+    public List<Student> get(String id){
        // students.indexOf();
+       return null;
     }
     
     
     
-    public void getAllByGender(String gender){
-        //HashSet<Student> students = new HashSet<>();
-        
+    public HashSet<Student> getAllByGender(String gender){
+        HashSet<Student> stuset = new HashSet<>();
+        stuset.addAll(students);
+        return stuset;
     }
     
     @Override
     public String toString() {
-        for (string )
-        return "Student{" + "name=" + name + ", id=" + id + ", gender=" + gender + ", grade=" + grade + '}';
+        String returnString = "Course {";
+        for (int i = 0; i < students.size(); i++ ){
+          returnString += students.toString();
+        }
+        returnString += "}";
+         return returnString;
     }
 }
